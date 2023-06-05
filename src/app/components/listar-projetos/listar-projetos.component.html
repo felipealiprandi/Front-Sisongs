@@ -1,0 +1,36 @@
+<div class="ui card lista-projetos">
+  <div class="content">
+    <div class="header">Projetos</div>
+  </div>
+  <div class="content">
+
+    <ng-container *ngIf="projetos$ | async as ongs; else carregando">
+      <ng-container *ngIf="ongs.length > 0; else semOngs">
+        <div *ngFor="let projeto of ongs" class="claim-row">
+          <div>
+            <strong>Nome: </strong>{{ projeto.nome }}
+          </div>
+          <div>
+            <strong>Data Inicio: </strong>{{ projeto.dataInicio }}
+          </div>
+          <div>
+            <strong>Data Fim: </strong>{{ projeto.dataFim }}
+          </div>
+          <div>
+            <strong>Local: </strong>{{ projeto.local }}
+          </div>
+          <br>
+
+        </div>
+      </ng-container>
+    </ng-container>
+
+    <ng-template #carregando>
+      Não há projetos cadastradas. 01
+    </ng-template>
+
+    <ng-template #semOngs>
+      Não há projetos cadastrados. 02
+    </ng-template>
+  </div>
+</div>

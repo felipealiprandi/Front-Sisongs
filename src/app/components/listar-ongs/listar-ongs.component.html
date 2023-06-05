@@ -1,0 +1,33 @@
+<div class="ui card lista-ongs">
+  <div class="content">
+    <div class="header">Ongs</div>
+  </div>
+  <div class="content">
+
+    <ng-container *ngIf="ongs$ | async as ongs; else carregando">
+      <ng-container *ngIf="ongs.length > 0; else semOngs">
+        <div *ngFor="let ong of ongs" class="claim-row">
+          <div>
+            <strong>Nome: </strong>{{ ong.nome }}
+          </div>
+          <div>
+            <strong>Endereço: </strong>{{ ong.endereco }}
+          </div>
+          <div>
+            <strong>Telefone: </strong>{{ ong.telefone }}
+          </div>
+          <br>
+
+        </div>
+      </ng-container>
+    </ng-container>
+
+    <ng-template #carregando>
+      Não há ongs cadastradas. 01
+    </ng-template>
+
+    <ng-template #semOngs>
+      Não há ongs cadastradas. 02
+    </ng-template>
+  </div>
+</div>

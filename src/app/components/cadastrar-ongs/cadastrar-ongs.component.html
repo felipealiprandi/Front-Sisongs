@@ -1,0 +1,54 @@
+<div class="ui card main-form">
+  <div class="content">
+    <h1 class="header">Dados da Ong</h1>
+  </div>
+  <div class="content">
+    <div class="ui large form equal width stackable grid">
+
+      <div class="one column row">
+        <div class="column field">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome"
+            placeholder="Nome" [(ngModel)]= "ong.nome" />
+        </div>
+
+        <div class="column field">
+          <label for="endereco">Endereco</label>
+          <input type="text" id="endereco" name="endereco"
+            placeholder="Endereco" [(ngModel)]= "ong.endereco"/>
+        </div>
+
+        <div class="column field">
+          <label for="cidade">Cidade</label>
+          <input type="text" id="cidade" name="cidade"
+            placeholder="Cidade" [(ngModel)]= "ong.cidade"/>
+        </div>
+
+        <div class="column field">
+          <label for="estado">Estado</label>
+          <input type="text" id="estado" name="estado"
+            placeholder="Estado" [(ngModel)]= "ong.estado"/>
+        </div>
+
+        <div class="column field">
+          <label for="telefone">Telefone</label>
+          <input type="text" id="telefone" name="telefone"
+            placeholder="Telefone" [(ngModel)]= "ong.telefone"/>
+        </div>
+
+        <div class="column field">
+          <label for="email">email</label>
+          <input type="text" id="email" name="email"
+            placeholder="Email" [(ngModel)]= "ong.email"/>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="extra content">
+    <div class="row">
+      <button class="ui positive right floated button" (click)="adicionar()">Salvar</button>
+    </div>
+  </div>
+</div>
