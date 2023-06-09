@@ -15,7 +15,7 @@ constructor(
 ){}
 
 adicionar() {
-  this.ongsService.salvarAPI(this.ong);
+  this.ongsService.salvar(this.ong);
 }
 
 }

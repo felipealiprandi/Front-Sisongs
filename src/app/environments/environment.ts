@@ -5,11 +5,7 @@
 export const environment = {
   production: false,
   version: '1.0',
-  API_CARROS: 'https://www.carqueryapi.com/api/0.3/?callback=?&',
-  API: 'https://backendsisongs-production.up.railway.app',
-  //API: 'https://backendsisongs-production.up.railway.app',
-
-
+  API: 'https://backendsisongs-production.up.railway.app'
 };
 
 /*
