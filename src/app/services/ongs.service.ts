@@ -31,10 +31,10 @@ export class OngsService {
 
     onlineOfflineService.trocaConexao.subscribe(online => {
       if (online) {
-        console.log('enviando os itens do IndexedDb para a API');
+        console.log('Enviando os itens do cache para a API');
         this.enviarItensdoIndexedDb();
       } else {
-        console.log('Offline. Salvando no IndexedDb');
+        console.log('Offline. Salvando em cache.');
       }
     });
   }
@@ -44,7 +44,7 @@ export class OngsService {
       .add(ong)
       .then(async () => {
         const todasOngs: Ong[] = await this.db.ongs.toArray();
-        console.log('item salvo no IndexedDb', todasOngs);
+        console.log('Item salvo no cache.', todasOngs);
       })
       .catch((err: any) => console.log('erro ao incluir item no IndexedDb', err));
   }
